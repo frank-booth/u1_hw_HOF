@@ -23,8 +23,13 @@ function returnSums(nums1, index) {
  * @param nums => [1,2,3,4,5]
  */
 
-function returnTotal(objs) {}
-
+function returnTotal(objs) {
+  let sum = 0
+  const numsPrint = objs.forEach((obj) => {
+    sum += obj.n
+  })
+  return sum
+}
 /**
  * Using forEach return a number that is the total sum of all numbers in the array of objects.
  * The key for each object will be n
@@ -48,7 +53,18 @@ function printMoney(decimals) {
  * Hint: Not all decimals have two places, make sure to return each decimal with the proper decimal places. .toFixed may be useful :)
  */
 
-function returnAllTrueValues(values) {}
+function returnAllTrueValues(values) {
+  const trueVal = values.filter((val) => {
+    if (val.happy === true) {
+      return val
+    }
+  })
+  return trueVal
+  /**v
+   * @param values => [{name: 'Joe', happy:false}]
+   * Using .filter, return an array of objects where happy equals true
+   */
+}
 
 /**
  * @param values => [{name: 'Joe', happy:false}]
@@ -81,6 +97,10 @@ console.log(newString)
 
 //Bonus
 function sortObjectsByValue(objs) {
+  const sortByValue = objs.sort((a, b) => {
+    return a.value - b.value
+  })
+  return sortByValue
   /**
    * @param objs => [{value: 1}, {value:2}, {value:23}]
    * Using .sort, sort the array of objects by the value key in ascending order
