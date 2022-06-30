@@ -1,63 +1,83 @@
 // You must RETURN your result in each function!
-
+const nums = [1, 2, 3, 4]
+nums.forEach(printNums)
 function printNums(nums) {
-  /**
-   *  Using .forEach, add each number in the nums array to a new array.
-   * @param nums => [1,2,3,4]
-   */
+  const newNums = nums
+  return newNums
+}
+/**
+ *  Using .forEach, add each number in the nums array to a new array.
+ * @param nums => [1,2,3,4]
+ */
+const nums1 = [1, 2, 3, 4, 5]
+nums1.forEach(returnSums)
+function returnSums(nums1, index) {
+  newArr1 = nums1 + index
+  //console.log(newArr1)
+  return newArr1
 }
 
-function returnSums(nums) {
-  /**
-   * Using forEach, push the sum of n plus the index
-   * to a new array and return the new array
-   * @param nums => [1,2,3,4,5]
-   */
-}
+/**
+ * Using forEach, push the sum of n plus the index
+ * to a new array and return the new array
+ * @param nums => [1,2,3,4,5]
+ */
 
-function returnTotal(objs) {
-  /**
-   * Using forEach return a number that is the total sum of all numbers in the array of objects.
-   * The key for each object will be n
-   * @param objs => [{n:1}]
-   */
-}
+function returnTotal(objs) {}
 
+/**
+ * Using forEach return a number that is the total sum of all numbers in the array of objects.
+ * The key for each object will be n
+ * @param objs => [{n:1}]
+ */
+
+const decimals = [2.3, 2.4, 32.99]
+const newArr2 = decimals.map(printMoney)
 function printMoney(decimals) {
-  /**
-   * @param decimals => [2.30, 2.40, 32.99]
-   * Using .map, return an array of decimals formatted as dollars.
-   * EX: {
-   * input: [12.34, 9.99],
-   * output: ['$12.34', '$9.99']
-   * }
-   * Hint: Not all decimals have two places, make sure to return each decimal with the proper decimal places. .toFixed may be useful :)
-   */
+  return `$${decimals.toFixed(2)}`
 }
+//console.log(newArr2)
 
-function returnAllTrueValues(values) {
-  /**
-   * @param values => [{name: 'Joe', happy:false}]
-   * Using .filter, return an array of objects where happy equals true
-   */
-}
+/**
+ * @param decimals => [2.30, 2.40, 32.99]
+ * Using .map, return an array of decimals formatted as dollars.
+ * EX: {
+ * input: [12.34, 9.99],
+ * output: ['$12.34', '$9.99']
+ * }
+ * Hint: Not all decimals have two places, make sure to return each decimal with the proper decimal places. .toFixed may be useful :)
+ */
 
-function addTwo(nums) {
-  /**
-   * @param nums => [1,2,3,4]
-   * Using .reduce, return the total sum of all numbers.
-   * Each number should have 2 added to it.
-   */
-  //   3
-  //   4 => 7
-}
+function returnAllTrueValues(values) {}
 
-function joinStrings(strings) {
-  /**
-   * @param strings => ['g', 'f', 'z']
-   * Using .reduce, return a new string containing each string from the strings array.
-   */
+/**
+ * @param values => [{name: 'Joe', happy:false}]
+ * Using .filter, return an array of objects where happy equals true
+ */
+const nums2 = [1, 2, 3, 4]
+const sum1 = nums2.reduce(addTwo, 0)
+function addTwo(total, numbers) {
+  return total + numbers + 2
 }
+//console.log(sum1)
+
+/**
+ * @param nums => [1,2,3,4]
+ * Using .reduce, return the total sum of all numbers.
+ * Each number should have 2 added to it.
+ */
+//   3
+//   4 => 7
+const strings = ['h', 'e', 'l', 'l', 'o']
+const newString = strings.reduce(joinStrings)
+function joinStrings(total, letter) {
+  return total + letter
+}
+console.log(newString)
+/**
+ * @param strings => ['g', 'f', 'z']
+ * Using .reduce, return a new string containing each string from the strings array.
+ */
 
 //Bonus
 function sortObjectsByValue(objs) {
